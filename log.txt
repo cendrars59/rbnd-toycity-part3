@@ -1,0 +1,23 @@
+commit 1b5659838e8e968c1a1b05f2a56410aeabdacf9c
+Author: Cyril Leroux <Cyril@MacBook-Pro-de-Cyril.local>
+Date:   Sun Feb 14 12:52:53 2016 +0100
+
+    Adding the refelctions file
+
+commit f4921deb6690329d2ba689198d08b31c7438a4e1
+Author: Cyril Leroux <Cyril@MacBook-Pro-de-Cyril.local>
+Date:   Sun Feb 14 12:15:56 2016 +0100
+
+    Soving the purchase part issue
+
+commit d2272d7b2a67ec183dc0211096d0e8f220db6954
+Author: Cyril Leroux <Cyril@MacBook-Pro-de-Cyril.local>
+Date:   Sun Feb 14 11:23:57 2016 +0100
+
+    Enconding transcation part
+
+commit 14c21e10423a3f57bf17931b8ccdd803e240d5d1
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 01:23:47 2016 -0800
+
+    Output return values to the command line

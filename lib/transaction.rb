@@ -1,6 +1,7 @@
 class Transaction
 
-  attr_accessor :id, :customer, :product
+  attr_accessor :id, :customer, :product, :invoice
+
   @@transactions = []
   @@transaction_count = 0
 
@@ -9,8 +10,10 @@ class Transaction
     @id = @@transaction_count
     @customer = customer
     @product = product
+    @invoice = generate_invoice
     add_to_transcations_list
     stock_update
+    credit_loyalty_points
   end
 
   def self.all
@@ -20,8 +23,6 @@ class Transaction
   def self.find(id)
     @@transactions.find { |transaction| transaction.id == id }
   end
-
-
 
   def stock_update
     if @product.in_stock?
@@ -37,6 +38,28 @@ class Transaction
 
   def not_exist_in_list?
     find_by_id(id)==nil
+  end
+
+  def credit_loyalty_points
+    if @product.price < 30
+      @customer.loyalty_points = @customer.loyalty_points + 10
+    else
+      @customer.loyalty_points = @customer.loyalty_points + 100
+    end
+  end
+
+  def fill_theinvoice(file)
+      file.puts ("------------------------------------------------------------------------------")
+      file.puts ("Transaction date : #{Time.now}          Transaction id:#{@id}")
+      file.puts ("Customer :#{@customer.name}      Loyalty points:#{@customer.loyalty_points}")
+      file.puts ("Item #{@product.title}    unit price: #{@product.price}$   ")
+      file.puts ("")
+      file.puts ("                          Total:#{@product.price}$                                      ")
+  end
+
+  def generate_invoice
+    file = File.new("Invoice_#{Time.now}_#{@customer.name}.txt", "w+")
+    fill_theinvoice(file)
   end
 
   private

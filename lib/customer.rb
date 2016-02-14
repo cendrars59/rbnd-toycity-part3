@@ -1,10 +1,11 @@
 class Customer
 
-    attr_accessor :name
+    attr_accessor :name, :loyalty_points
     @@customers = []
 
     def initialize customer
       @name = customer[:name]
+      @loyalty_points = 0 # Loyalty_points is new feature 1
       add_to_customers_list
     end
 
@@ -25,7 +26,7 @@ class Customer
     end
 
     def purchase(product)
-      transaction = Transaction.new(@name,product)
+      transaction = Transaction.new(self,product)
     end
 
     private
