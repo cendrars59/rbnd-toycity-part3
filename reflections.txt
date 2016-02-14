@@ -1,12 +1,31 @@
 How long did you spend working on this project?
 
+Answer : 6 hours cumulated
+
+ -------------------------------------------------------------------------------------------------------------
 
 What was the most rewarding challenge you conquered?
 
+Answer : Finish each project according the timeline and re use as possible all the learnt things
+
+-------------------------------------------------------------------------------------------------------------
 
 What two additional features did you build? Why?
 
+Feature 1 : Loyalty points generation
+  Purpose description : According the amount of the transaction (Price of the toy).
+  The customer earns loyalty points
 
+  Why :  Usual feature on an e-commerce portal
 
+Feature 2 : Invoice generation
+    Purpose description : For each transaction an invoice is generated according the parameters.
+    Ok it is not an optimize feature but for a demo purpose
+
+Why :  Usual feature on an e-commerce portal when customers buy item
+
+--------------------------------------------------------------------------------------------------------------
 
 Where do you still have room to grow?
+
+Answer : I think the feature design stage before encoding in order to get an optimize code and structure 
