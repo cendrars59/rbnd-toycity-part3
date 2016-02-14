@@ -25,7 +25,7 @@ class Customer
     end
 
     def purchase(product)
-      transaction = Transaction.new(product)
+      transaction = Transaction.new(@name,product)
     end
 
     private
